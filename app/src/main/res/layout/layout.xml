@@ -32,4 +32,49 @@
         android:textSize="20dp"
         android:textStyle="bold"></TextView>
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:id="@+id/optionsLayout">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+            android:text="Option A"
+            android:textColor="@color/black"
+            android:id="@+id/optA"
+            ></Button>
+
+        <Button
+            android:id="@+id/optB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+            android:text="Option B"
+            android:textColor="@color/black"></Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+            android:text="Option C"
+            android:textColor="@color/black"
+            android:id="@+id/optC"
+            ></Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/white"
+            android:text="Option D"
+            android:textColor="@color/black"
+            android:id="@+id/optD"
+            ></Button>
+    </LinearLayout>
+
+    </RelativeLayout>
