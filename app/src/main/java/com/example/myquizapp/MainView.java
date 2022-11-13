@@ -46,13 +46,22 @@ public class MainView extends AppCompatActivity implements View.OnClickListener{
 
         noOfQuestions.setText("Total Questions : "+question.length);
 
+        int max = question.length-1;
+        int min = 0;
+        int range = max - min + 1;
+
+        int ind = (int)(Math.random() * range) + min;
+        showNewQuestion(ind);
 
     }
 
-    puclic void showNewQuestion(int ind)
+    public void showNewQuestion(int ind)
     {
         Question.setText(question[ind]);
-        opt1.setText();
+        opt1.setText(choices[ind][0]);
+        opt2.setText(choices[ind][1]);
+        opt3.setText(choices[ind][2]);
+        opt4.setText(choices[ind][3]);
     }
     @Override
     public void onClick(View view) {
