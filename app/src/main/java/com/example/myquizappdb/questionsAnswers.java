@@ -8,7 +8,7 @@ public class questionsAnswers {
     ArrayList<String> answers=new ArrayList<String>();
     String choices[][]={{"Hazrat Abubakar R.A.","Hazrat Umar R.A","Hazrat Ali R.A.","Hazrat Usman R.A."},{"Gazwa Ahzab","Gazwa Khyber"
     ,"Gazwa Badr","Gazwa Tabook"},{"Surah Namal","Surah Ahzab","Surah Anfal","Sura Nisa"},
-            {"Surah Lahab","Surah Baqarah","Surah "}};
+            {"Surah Lahab","Surah Baqarah","Surah Namal", "Surah Nahl"},{"Lying","Jealousy","Shirk","Zina"}};
 
 
     public questionsAnswers()
@@ -23,5 +23,18 @@ public class questionsAnswers {
         answers.add("Surah Ahzab");
         answers.add("Surah Nahl");
         answers.add("Shirk");
+    }
+
+    public ArrayList<String> getQuestions()
+    {
+        return questions;
+    }
+    public ArrayList<String> getAnswers()
+    {
+        return answers;
+    }
+    public String[][] getChoices()
+    {
+        return choices;
     }
 }
