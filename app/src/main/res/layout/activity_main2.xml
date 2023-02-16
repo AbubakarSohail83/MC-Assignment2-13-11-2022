@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.686">
 
         <Button
-            android:id="@+id/Score"
+            android:id="@+id/optA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
@@ -59,7 +59,7 @@
             android:textColor="@color/background_green" />
 
         <Button
-            android:id="@+id/View_LeaderBoard"
+            android:id="@+id/optB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"

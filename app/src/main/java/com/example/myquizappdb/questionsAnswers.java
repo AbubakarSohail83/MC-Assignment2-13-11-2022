@@ -1,14 +1,14 @@
 package com.example.myquizappdb;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.Random;
 
 public class questionsAnswers {
-    ArrayList<String> questions=new ArrayList<String>();
+    static ArrayList<String> questions=new ArrayList<String>();
     ArrayList<String> answers=new ArrayList<String>();
     String choices[][]={{"Hazrat Abubakar R.A.","Hazrat Umar R.A","Hazrat Ali R.A.","Hazrat Usman R.A."},{"Gazwa Ahzab","Gazwa Khyber"
     ,"Gazwa Badr","Gazwa Tabook"},{"Surah Namal","Surah Ahzab","Surah Anfal","Sura Nisa"},
             {"Surah Lahab","Surah Baqarah","Surah Namal", "Surah Nahl"},{"Lying","Jealousy","Shirk","Zina"}};
+    public static int score=0;
 
 
     public questionsAnswers()
@@ -25,9 +25,29 @@ public class questionsAnswers {
         answers.add("Shirk");
     }
 
+    public void checkAnswer(int questionNum, String Answer)
+    {
+        if(answers.get(questionNum)==Answer)
+        {
+            score++;
+        }
+        else
+            score--;
+    }
+
+    public String getQuestion(int num)
+    {
+        return questions.get(num);
+    }
+
     public ArrayList<String> getQuestions()
     {
         return questions;
+    }
+    public static int getNumberOfQuestions()
+    {
+        System.out.print(0);
+        return questions.size();
     }
     public ArrayList<String> getAnswers()
     {
@@ -36,5 +56,17 @@ public class questionsAnswers {
     public String[][] getChoices()
     {
         return choices;
+    }
+    public  String[] getRandomChoices(int questionNum)
+    {
+        Random rand = new Random();
+        String choiceSequence[]={"","","",""};
+        for(int i=0;i<4;i++)
+        {
+            int rand_int = rand.nextInt(4);
+            if(choiceSequence[rand_int]!="")
+                choiceSequence[rand_int]=choices[questionNum][i];
+        }
+        return choiceSequence;
     }
 }
